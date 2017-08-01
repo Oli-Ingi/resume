@@ -1,0 +1,283 @@
+@charset "UTF-8";
+/* Overall */
+* {
+  margin: 0;
+  font-family: 'Muli', sans-serif; }
+
+html, body {
+  height: 100%; }
+
+body {
+  background-color: #FFF; }
+
+.subtitle {
+  color: #173C63; }
+
+a, .verkefni .screenshot-origin {
+  color: #173C63;
+  font-size: 18px;
+  font-weight: 200; }
+
+.document-model {
+  margin: 30px auto;
+  box-shadow: 10px 10px 30px #666;
+  max-width: 960px; }
+
+/* Header section */
+header, footer {
+  width: 100%;
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  background-color: #F1F1F2; }
+  header .portrait-pic, footer .portrait-pic {
+    height: 100%; }
+  header .subtitle, footer .subtitle {
+    font-size: 2em; }
+  header div, footer div {
+    margin: 0 auto; }
+  header h1, footer h1 {
+    padding: 0 60px;
+    font-weight: 200;
+    font-size: 1.5em; }
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  /* js click effect */ }
+  main .section-opener {
+    background-color: #173C63;
+    padding: 10px 20px;
+    transition: 0.3s;
+    color: #F1F1F2; }
+  main .section-opener:hover {
+    cursor: pointer;
+    padding-left: 30px;
+    background-color: #1a446f; }
+  main .open-section {
+    padding-left: 30px; }
+
+/* Overall sections */
+.content {
+  padding: 30px;
+  display: none;
+  position: relative;
+  background-color: #F1F1F2; }
+  .content .subtitle {
+    font-size: 1.5em;
+    font-weight: bold; }
+  .content .period {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 8px; }
+  .content ul {
+    max-width: 600px; }
+  .content li {
+    margin: 6% 0; }
+
+.flexible {
+  display: flex;
+  flex-wrap: wrap; }
+
+/* forritunar- og tölvukunnátta */
+.kunnatta .category {
+  margin: 30px; }
+
+.kunnatta li {
+  margin: 2% 0; }
+
+.kunnatta .legend {
+  margin-top: 10px;
+  background-color: #173C63;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  display: inline-block;
+  color: #F1F1F2; }
+
+.kunnatta .legend-item {
+  margin: 10px; }
+
+.kunnatta .colored {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px; }
+
+.kunnatta .good {
+  color: green; }
+
+.kunnatta .ok {
+  color: #BBB900; }
+
+.kunnatta .meh {
+  color: #F17A01; }
+
+.kunnatta .green {
+  background-color: green; }
+
+.kunnatta .yellow {
+  background-color: #BBB900; }
+
+.kunnatta .orange {
+  background-color: #F17A01; }
+
+/* Verkefni section */
+.more-content {
+  display: none;
+  margin-bottom: 20px; }
+
+.more, .less {
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  width: 100px; }
+  .more div, .less div {
+    transition: 1s;
+    display: inline-block; }
+  .more span, .less span {
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block; }
+
+.more:hover div {
+  transform: translateX(30px); }
+
+.less:hover div {
+  transform: translateX(0px); }
+
+.arrows-hide {
+  transform: rotateZ(180deg); }
+
+.transx-hard {
+  transform: translateX(30px); }
+
+.verkefni {
+  padding: 20px;
+  max-width: 400px; }
+  .verkefni h3 {
+    margin-bottom: 10px; }
+  .verkefni h4 {
+    color: #173C63;
+    margin: 5px 0; }
+  .verkefni a, .verkefni .screenshot-origin, .verkefni .screenshot-origin {
+    margin: 10px 0 10px 10px;
+    display: inline-block; }
+  .verkefni .screenshot-origin {
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 0; }
+
+#basic-link {
+  font-size: inherit;
+  margin: 0; }
+
+.verkefni-links {
+  margin-top: 50px; }
+  .verkefni-links a, .verkefni-links .verkefni .screenshot-origin, .verkefni .verkefni-links .screenshot-origin {
+    font-size: 1em; }
+  .verkefni-links li {
+    margin: 2% 0; }
+
+.screenshot {
+  position: fixed;
+  width: 75vw;
+  left: 12.5vw;
+  top: calc(50vh - 21.1vw);
+  transform: scale(0);
+  transition: 0.5s ease-in-out;
+  z-index: 10; }
+
+.scalem-up {
+  transform: scale(1); }
+
+/* js effect */
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.0;
+  visibility: hidden;
+  z-index: 5;
+  transition: 0.5s;
+  margin-top: -30px; }
+
+.the-darkness {
+  opacity: 0.7;
+  visibility: visible; }
+
+/* Tungumála section */
+th, td {
+  padding: 5px 20px; }
+
+thead th {
+  color: #173C63;
+  font-size: 1.2em; }
+
+/* Áhugamál section */
+/* Meðmælendur section */
+.ahugamal ul li ul li, .medmaelendur ul li ul li {
+  margin: 2% 0; }
+
+section:last-child .content {
+  border-bottom: 2px solid #173C63; }
+
+/* Footer */
+.contact-info {
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.contact-info h2 {
+  margin-bottom: 10px;
+  font-size: 1.3em;
+  font-family: 'Muli', sans-serif;
+  font-weight: 200; }
+
+.contact-info .list-title {
+  display: inline-block;
+  color: #173C63;
+  width: 200px; }
+
+.contact-info .list-content {
+  display: inline-block;
+  font-size: 0.8em; }
+
+.contact-info ul {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0; }
+
+.contact-info p {
+  vertical-align: top; }
+
+.contact-info > ul > li {
+  padding: 1% 0; }
+
+/* Media queries */
+@media only screen and (max-width: 961px) {
+  .document-model {
+    margin: 0; }
+  .overlay {
+    margin-top: 0; } }
+
+@media only screen and (max-width: 570px) {
+  header h1, footer h1 {
+    font-size: 1.5em;
+    padding: 0 30px; }
+  header .subtitle, footer .subtitle {
+    font-size: 1.2em; }
+  .section-opener {
+    font-size: 1.2em; }
+  .contact-info .list-title {
+    display: none; } }
+
+@media only screen and (max-width: 400px) {
+  .portrait-pic {
+    display: none; }
+  th, td {
+    padding: 5px 5px; } }
