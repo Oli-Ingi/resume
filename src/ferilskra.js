@@ -1,3 +1,6 @@
+require("./ferilskra.css");
+require("./style.css");
+
 $(document).ready(function () {
   $(".section-opener").click(function(e) {
     var content = $(this).next();
@@ -46,12 +49,58 @@ $(document).ready(function () {
     img.addClass("scalem-up");
 
     $(".overlay").addClass("the-darkness");
+    
+    if (img.next(".screenshot").length) 
+      $("#img-controls").find("#show-next").css("display", "block");
 
     window.addEventListener("mousedown", function removeImg(e) {
-      img.removeClass("scalem-up");
+      if ($(e.target).is("#show-next") || $(e.target).is("#show-prev")) return;
+
+      $("#img-controls").find("img").hide();
+
+      $(".screenshot")
+        .removeClass("scalem-up")
+        .removeClass("move-right")
+        .removeClass("move-left")
+        .removeClass("selected-img");
+
+      $("#doddi-first-img").addClass("selected-img");
+
       $(".overlay").removeClass("the-darkness");
-      window.removeEventListener("click", removeImg);
+      window.removeEventListener("mousedown", removeImg);
     });
+  });
+
+  $("#show-next").click(function (e) {
+    $(".selected-img")
+    .addClass("move-right")
+    .removeClass("selected-img")
+    .next(".screenshot")
+    .removeClass("move-left")
+    .removeClass("move-right")
+    .addClass("selected-img")
+    .addClass("scalem-up");
+
+    $("#show-prev").show();
+
+    if (!$(".selected-img").next(".screenshot").length)
+      $(this).hide();
+  });
+
+  $("#show-prev").click(function (e) {
+    $(".selected-img")
+    .addClass("move-left")
+    .removeClass("selected-img")
+    .prev(".screenshot")
+    .removeClass("move-left")
+    .removeClass("move-right")
+    .addClass("selected-img")
+    .addClass("scalem-up");
+
+    $("#show-next").show();
+
+    if (!$(".selected-img").prev(".screenshot").length)
+      $(this).hide();
   });
 
 });
