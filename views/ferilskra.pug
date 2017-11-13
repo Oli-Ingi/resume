@@ -59,24 +59,22 @@ html(lang='is')
                 ul
                   li.good C#
                   li.good Javascript (ES5, ES6)
+                  li.good Typescript
                   li.good CSS
                   li.good SASS
                   li.good SQL
                   li.good Java
                   li.good Git
                   li.good Python
-                  li.ok Scheme
-                  li.ok R
                   li.ok C
               .category
                 h3.subtitle Þróunarumhverfi
                 ul
-                  li.good .NET (VS2015, VS2017)
+                  li.good Visual Studio (2015, 2017)
                   li.good Node.js
                   li.good MS SQL Server 2016 Management Studio
                   li.ok Android Studio
                   li.ok Eclipse
-                  li.meh Rstudio
               .category
                 h3.subtitle Þróunarstjórnun
                 ul
@@ -90,7 +88,11 @@ html(lang='is')
                   li.good Pug
                   li.good Handlebars
                   li.ok XML
-                  li.meh Latex
+              .category
+                h3.subtitle Prófun
+                ul
+                  li.ok Mocha
+                  li.ok Jest
               .category
                 h3.subtitle Gagnagrunnskerfi
                 ul
@@ -151,12 +153,12 @@ html(lang='is')
                     span.arrow-far >
                 .more-content
                   p
-                    | Þetta er mjög svo spennandi teymis-verkefni þar sem við vinnum þrír saman að lausn. Kerfið er í smíðum þessa dagana og komið tiltölulega stutt á veg. Því er lítið hægt að segja frá um eiginleika kerfisins enn sem komið er en áætluð fyrsta útgáfa er um áramótin.
-                    | Ég er, og mun, að mestu leyti vinna í framendanum og þeim hluta bakendans sem sér um að tala við vefþjónustuna sem mun dæla út gögnunum.
+                    | Þetta er teymis-verkefni þar sem við vinnum þrír saman að lausn. Kerfið er í smíðum þessa dagana og komið tiltölulega stutt á veg. Því er lítið hægt að segja frá um eiginleika kerfisins enn sem komið er en áætluð fyrsta útgáfa er um áramótin.
+                    | Ég er að, og mun að mestu leyti vinna í framendanum og þeim hluta bakendans sem sér um að tala við vefþjónustuna se dælir út gögnunum.
                   h4 Tæknilegar upplýsingar
                   p
-                    | Verkefnið er og verður unnið í Visual Studio 2017 í ASP.NET Core 2.0. Framendinn verður byggður út frá React&Redux template-inu sem nýjasta version af Visual Studio býður upp á. Framendinn verður því skrifaður í typescript með React og Redux sem sér um framendagögn. Stíllinn verður útfærður með bootstrap 4 (ásamt custom css þar sem síðan verður að uppfylla tilteknar reglur um stíl) og webpack notað fyrir build.
-                    | Bakendi vefsíðunnar verður skrifaður í C# og sama með vefþjónustuna. Að auki munum við setja upp og nota Identity Server 4 fyrir notendaauðkenningu sem verður svo nýtt einnig í fleiri verkefnum. Vefþjónustan mun sækja gögn upp úr nýjum Informix grunni og einnig Oracle grunni.
+                    | Verkefnið er unnið í Visual Studio 2017 í ASP.NET Core 2.0. Framendinn er byggður á React&Redux sniðmátinu sem nýjasta útgáfa af Visual Studio býður upp á. Framendinn er þ.a.l. skrifaður í typescript með React og Redux sem sér um agögnin. Stíllinn verður útfærður með bootstrap 4 (ásamt custom css) og webpack notað fyrir build.
+                    | Bakendi vefsíðunnar er skrifaður í C# og sama með vefþjónustuna. Að auki munum við setja upp og nota Identity Server 4 fyrir notendaauðkenningu sem verður svo nýtt einnig í fleiri verkefnum. Vefþjónustan sækir gögn upp úr nýjum Informix grunni og einnig Oracle grunni.
               .verkefni
                 h3.subtitle Rafræn matsblöð
                 h4 Þjóðskrá Íslands, vefforrit
@@ -180,16 +182,16 @@ html(lang='is')
                     span.arrow-far >
                 .more-content
                   p
-                    | Kerfið er notað til þess að geta meðhöndlað ýmis konar matsblöð sem tengjast tilteknum landnúmerum. Matsblöðin sjálf eru skönnuð inn í kerfið og geymd í grunni sem pdf skjöl. Leitað er efitr landnúmeri og þá fæst listi með öllum skjölum sem hafa tengingu við landnúmerið í grunninum. 
-                    | Hægt er að skoða pdf skjölin á síðunni og meðhöndla ýmsa eiginleika tengda við skjölin, s.s. breyta tengingum við landnúmer, skrá minnismiða við tiltekin skjöl og sækja valin skjöl í zip skrá. Kerfið samanstendur m.a. af vefsíðu og vefþjónustu. Kerfið var upprunalega smíðað af fyrrverandi starfsmanni, og þurfti vefsíðan lagfæringu sem ég var settur í.
+                    | Kerfið er notað til þess að geta meðhöndlað ýmis konar matsblöð sem tengjast tilteknum landnúmerum. Matsblöðin sjálf eru skönnuð inn í kerfið og geymd í grunni sem pdf skjöl. Leitað er eftir landnúmeri og þá fæst listi með öllum skjölum sem hafa tengingu við landnúmerið í grunninum. 
+                    | Hægt er að skoða pdf skjölin beint á síðunni og meðhöndla ýmsa eiginleika tengda við skjölin, s.s. breyta tengingum við landnúmer, skrá minnismiða við tiltekin skjöl og sækja valin skjöl í zip skrá. Kerfið samanstendur m.a. af vefsíðu og vefþjónustu. Kerfið var upprunalega smíðað af fyrrverandi starfsmanni, og þurfti vefsíðan lagfæringu sem ég var settur í.
                     | Ákveðið var að ég myndi útbúa nýja vefsíðu og samræma vefþjónustuna við hana.
                   h4 Tæknilegar upplýsingar
                   p
-                    | Vefsíðan er smíðuð í Visual Studio 2017 með ASP.NET MVC (.NET Framework 4.5). Bakendinn er bara boilerplate með einum controller þar sem vefsíðan er í raun SPA og sækir öll gögn frá vefþjónustu.
+                    | Vefsíðan er smíðuð í Visual Studio 2017 með ASP.NET MVC (.NET Framework 4.5). Bakendinn er nánast enginn, bara einn controller þar sem vefsíðan er í raun SPA og sækir öll gögn frá REST vefþjónustu.
                   p
                     | Framendinn er skrifaður í plain javascript og jQuery að einhverju leyti. Önnur libraries sem notuð eru: Handlebars.js fyrir templating, Bootstrap 3 fyrir stíl, dagsetningarveljara og modal glugga, Moment.js fyrir vinnu með dagsetningar og pdf.js til að sækja og birta pdf á canvas elementi.
                   p
-                    | Vefþjónustan er skrifuð í C# og notar OData library-ið fyrir samskipti. Einungis skráðir Active Directory notendur geta sótt gögn frá vefþjónustunni, og hún notar CORS. Vefþjónustan talar við SQL-Server grunn með Entity Framework.
+                    | Vefþjónustan er skrifuð í C# og notar OData fyrir samskipti. Einungis skráðir Active Directory notendur geta sótt gögn frá vefþjónustunni, og hún notar CORS. Vefþjónustan talar við SQL-Server grunn með Entity Framework.
               .verkefni
                 h3.subtitle Upplýsingaskjár í afgreiðslu Þjóðskrár Íslands
                 h4 Þjóðskrá Íslands, vefforrit
@@ -208,7 +210,7 @@ html(lang='is')
                     | Hugmyndin var að veita viðskiptavinum skemmtilegar upplýsingar úr þjóðskrá ásamt ýmsum nytsamlegum leiðbeiningum á meðan þeir bíða eftir afgreiðslu.
                   p
                     | Umsjónaraðili getur fengið aðgang að kerfinu í gegnum Active Directory og getur þá búið til/breytt/eytt síðum sem eru eða eiga að fara í sýningu. Aðilinn getur þá stýrt útlitinu á síðunum í sýningunni, s.s. font eiginleikum ásamt almennari útlitsatriðum
-                    | á sýningunni sjálfri, t.d. bakgrunnsmynd, útlit á klukku/logo o.fl.. Einnig er hægt að stilla tímalengd síðu á skjá, tímabil sem sýna má síðuna (T.d. bara fram að þarnæstu helgi eða alltaf bara á jólunum) og ýmislegt
+                    | á sýningunni sjálfri, t.d. bakgrunnsmynd, útlit á klukku/logo o.fl. Einnig er hægt að stilla tímalengd síðu á skjá, tímabil sem sýna má síðuna (T.d. bara fram að þarnæstu helgi eða alltaf bara á jólunum) og ýmislegt
                     | fleira.
                   p Ég sá um allt kerfið sjálfur.
                   h4 Tæknilegar upplýsingar
@@ -370,8 +372,7 @@ html(lang='is')
               li
                 h3.subtitle Líkamsrækt
                 p
-                  | Nú eftir námið hef ég verið mjög duglegur að lyfta í ræktinni og fer alltaf eftir vinnu þegar tækifæri gefst, sem er ca. 3-4 sinnum í viku.
-                  | Ég og unnusta mín reynum líka að nýta hvert tækifæri sem gefst í kvöldgöngur.
+                  | Eftir námið hef ég stundað líkamsrækt af miklum krafti og reyni að fara eins oft og ég mögulega get í ræktina með félaga mínum.
               li
                 h3.subtitle Raftónlistarsmíð
                 p
